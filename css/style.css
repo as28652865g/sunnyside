@@ -30,13 +30,20 @@
 .wrap header .header-bgImage .nav .logo {
   font-size: 2rem;
   font-weight: 600;
+  cursor: pointer;
 }
 .wrap header .header-bgImage .nav .nav-item {
   display: flex;
-  font-weight: 300;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 .wrap header .header-bgImage .nav .nav-item > div {
-  padding-left: 2.5rem;
+  padding: 1rem 2rem;
+}
+.wrap header .header-bgImage .nav .nav-item > div:hover {
+  background-color: #6FCFFF;
+  border-radius: 2rem;
 }
 .wrap header .header-bgImage .header-main {
   display: flex;
