@@ -11,11 +11,19 @@
 
 //Font color
 $white: #fff;
+$black: #000;
+$gray: #8A8990;
 $font-family-Barlow: 'Barlow', sans-serif;
 $font-family-Fraunces: 'Fraunces', serif;
+
+@keyframes UpDown{
+    0% {top: 0;}
+    100% {top: 1rem;}
+}
 .wrap
 {
-    max-width: 1920px;
+    max-width: 1440px;
+    margin: 0 auto;
     height: 100%;
     header
     {
@@ -38,14 +46,22 @@ $font-family-Fraunces: 'Fraunces', serif;
                 {
                     font-size: 2rem;
                     font-weight: 600;
+                    cursor: pointer;
                 }
                 .nav-item
                 {
                     display: flex;
-                    font-weight: 300;
+                    cursor: pointer;
+                    font-weight: 600;
+                    font-size: 1.2rem;
                     & > div 
                     {
-                        padding-left: 2.5rem;
+                        padding:1rem 2rem;
+                    }
+                    & > div:hover
+                    {
+                        background-color: #6FCFFF;
+                        border-radius: 2rem;
                     }
                 }
             }
@@ -61,8 +77,53 @@ $font-family-Fraunces: 'Fraunces', serif;
                 padding-top: 5rem;
                 & > p.icon-arrow-down
                 {
+                    position: relative;
                     padding-top: 6.5rem;
+                    animation-name: UpDown;
+                    animation-duration: 2s;
+                    animation-timing-function: linear;
+                    animation-direction:alternate;
+                    animation-iteration-count: infinite;
                 }
+            }
+        }
+    }
+    .main 
+    {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        & > div
+        {
+            width: 50%;
+            & > h2 
+            {
+                font-size: 2.5rem;
+                font-family: $font-family-Fraunces;
+            }
+            & > p 
+            {
+                padding-top: 2rem;
+                font-size: 1rem;
+                color: #8A8990;
+                font-family: $font-family-Barlow;
+                font-weight: 600;
+                & + p 
+                {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    color: #000;
+                    font-family: $font-family-Fraunces;
+                }
+            }
+            & > img 
+            {
+                vertical-align: bottom;
+            }
+            &:nth-child(1),
+            &:nth-child(4)
+            {
+                padding: 5rem;
             }
         }
     }
