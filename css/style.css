@@ -117,4 +117,39 @@
 }
 .wrap .main > div:nth-child(1), .wrap .main > div:nth-child(4) {
   padding: 5rem;
+}
+.wrap .textimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .textimonials > h3 {
+  padding-top: 5rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  color: #8A8990;
+}
+.wrap .textimonials .items {
+  display: flex;
+  padding-top: 2.5rem;
+}
+.wrap .textimonials .items > .item {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.wrap .textimonials .items > .item > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.wrap .textimonials .items > .item > p {
+  padding-top: 3rem;
+}
+.wrap .textimonials .items > .item > .text {
+  padding-top: -3rem;
 }/*# sourceMappingURL=style.css.map */
