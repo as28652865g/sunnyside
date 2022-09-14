@@ -59,6 +59,10 @@
 .wrap header .header-bgImage .nav .nav-item > div {
   padding: 1rem 2rem;
 }
+.wrap header .header-bgImage .nav .nav-item > div > a {
+  text-decoration: none;
+  color: #fff;
+}
 .wrap header .header-bgImage .nav .nav-item > div:hover {
   background-color: #6FCFFF;
   border-radius: 2rem;
@@ -152,4 +156,51 @@
 }
 .wrap .textimonials .items > .item > .text {
   padding-top: -3rem;
+}
+.wrap .images {
+  display: flex;
+  padding-top: 3rem;
+}
+.wrap .images > img {
+  width: 25%;
+}
+.wrap footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #90D4C5;
+  padding-top: 2rem;
+}
+.wrap footer > h2 {
+  font-family: "Barlow", sans-serif;
+  color: #32796B;
+  font-size: 2.5rem;
+  font-weight: 600;
+  cursor: default;
+}
+.wrap footer > .footer-link {
+  display: flex;
+}
+.wrap footer > .footer-link > div {
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+}
+.wrap footer > .footer-link > div:hover {
+  background-color: #6fc6b3;
+  border-radius: 2rem;
+}
+.wrap footer > .footer-link > div > a {
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  color: #488C7D;
+  font-weight: 600;
+}
+.wrap footer > .footer-icon {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+.wrap footer > .footer-icon > .icon-link > img {
+  padding: 0 0.5rem;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

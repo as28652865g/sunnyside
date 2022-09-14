@@ -13,6 +13,10 @@
 $white: #fff;
 $black: #000;
 $gray: #8A8990;
+$footer-bg: #90D4C5;
+$footer-fontH2-color: #32796B;
+$footer-link-color: #488C7D;
+$footer-link-color-hover: #6fc6b3;
 $font-family-Barlow: 'Barlow', sans-serif;
 $font-family-Fraunces: 'Fraunces', serif;
 
@@ -57,6 +61,11 @@ $font-family-Fraunces: 'Fraunces', serif;
                     & > div 
                     {
                         padding:1rem 2rem;
+                        & > a 
+                        {
+                            text-decoration: none;
+                            color: $white;
+                        }
                     }
                     & > div:hover
                     {
@@ -165,6 +174,66 @@ $font-family-Fraunces: 'Fraunces', serif;
                 & > .text 
                 {
                     padding-top: -3rem;
+                }
+            }
+        }
+    }
+    .images
+    {
+        display: flex;
+        padding-top: 3rem;
+        & > img 
+        {
+            width: 25%;
+        }
+    }
+    footer 
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $footer-bg;
+        padding-top: 2rem;
+        & > h2 
+        {
+            font-family: $font-family-Barlow;
+            color: $footer-fontH2-color;
+            font-size: 2.5rem;
+            font-weight: 600;
+            cursor: default;
+        }
+        & > .footer-link 
+        {
+            display: flex;
+            & > div 
+            {
+                margin-top: 2rem;
+                padding: 1rem 1.5rem;
+                &:hover 
+                {
+                    background-color: $footer-link-color-hover;
+                    border-radius: 2rem;
+                }
+                & > a 
+                {
+                    text-decoration: none;
+                    font-family: $font-family-Barlow;
+                    color: $footer-link-color;
+                    font-weight: 600;
+                }
+            }
+        }
+        & > .footer-icon 
+        {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+            & > .icon-link 
+            {
+                & > img 
+                {
+                    padding: 0 .5rem;
+                    cursor: pointer;
                 }
             }
         }
