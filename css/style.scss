@@ -55,7 +55,7 @@ $font-family-Fraunces: 'Fraunces', serif;
             background-size: cover;
             background-position: center;
             width: 100%;
-            height: 100vh;
+            height: 75vh;
             .nav
             {
                 display: flex;
@@ -135,7 +135,6 @@ $font-family-Fraunces: 'Fraunces', serif;
                     }
                 }
             }
-
             .header-main
             {
                 display: flex;
@@ -143,13 +142,13 @@ $font-family-Fraunces: 'Fraunces', serif;
                 align-items: center;
                 justify-content: center;
                 font-family: $font-family-Fraunces;
-                font-size: 4.5rem;
+                font-size: 3.5rem;
                 letter-spacing: .2rem;
-                padding-top: 6rem;
+                padding-top: 3rem;
                 & > p.icon-arrow-down
                 {
                     position: relative;
-                    padding-top: 6.5rem;
+                    padding-top: 2.5rem;
                     animation-name: UpDown;
                     animation-duration: 2s;
                     animation-timing-function: linear;
@@ -158,11 +157,11 @@ $font-family-Fraunces: 'Fraunces', serif;
                 }
                 @include pad 
                 {
-                    font-size: 3rem;
-                    padding-top: 7rem;
+                    font-size: 2.5rem;
+                    padding-top: 4rem;
                     & > p.icon-arrow-down 
                     {
-                        padding-top: 5rem;
+                        padding-top: 2rem;
                     }
                 }
                 @include mobile
@@ -171,7 +170,7 @@ $font-family-Fraunces: 'Fraunces', serif;
                     padding: 3rem 4%;
                     & > p.icon-arrow-down 
                     {
-                        padding-top: 3rem;
+                        display: none;
                     }
                 }
             }
