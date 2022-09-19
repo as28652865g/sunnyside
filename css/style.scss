@@ -11,6 +11,7 @@
 //Font color
 $white: #fff;
 $black: #000;
+$blue: #9bdeff;
 $gray: #8A8990;
 $footer-bg: #90D4C5;
 $footer-fontH2-color: #32796B;
@@ -47,6 +48,7 @@ $font-family-Fraunces: 'Fraunces', serif;
     header
     {
         color: $white;
+        position: relative;
         .header-bgImage
         {
             background-image: url(../images/desktop/image-header.jpg);
@@ -92,7 +94,48 @@ $font-family-Fraunces: 'Fraunces', serif;
                         display: none;
                     }
                 }
+                .nav-menu 
+                {
+                    display: none;
+                    @include pad 
+                    {
+                        display: block;
+                        & > img 
+                        {
+                            width: 30px;
+                            height: 30px;
+                        }
+                        & > .menu-item
+                        {
+                            display: none;
+                        }
+                        &:hover .menu-item 
+                        {
+                            display: block;
+                            position: absolute;
+                            right: 2rem;
+                            width: 40%;
+                            height: auto;
+                            background-color: $gray;
+                            & > div 
+                            {
+                                font-size: 1.4rem;
+                                padding: 1rem 1rem;
+                                & > a 
+                                {
+                                    text-decoration: none;
+                                    color: $white;
+                                }
+                                &:hover 
+                                {
+                                    background-color: $blue;
+                                }
+                            }
+                        }
+                    }
+                }
             }
+
             .header-main
             {
                 display: flex;

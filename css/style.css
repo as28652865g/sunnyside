@@ -30,6 +30,7 @@
 }
 .wrap header {
   color: #fff;
+  position: relative;
 }
 .wrap header .header-bgImage {
   background-image: url(../images/desktop/image-header.jpg);
@@ -70,6 +71,40 @@
 @media (max-width: 769px) {
   .wrap header .header-bgImage .nav .nav-item {
     display: none;
+  }
+}
+.wrap header .header-bgImage .nav .nav-menu {
+  display: none;
+}
+@media (max-width: 769px) {
+  .wrap header .header-bgImage .nav .nav-menu {
+    display: block;
+  }
+  .wrap header .header-bgImage .nav .nav-menu > img {
+    width: 30px;
+    height: 30px;
+  }
+  .wrap header .header-bgImage .nav .nav-menu > .menu-item {
+    display: none;
+  }
+  .wrap header .header-bgImage .nav .nav-menu:hover .menu-item {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    width: 40%;
+    height: auto;
+    background-color: #8A8990;
+  }
+  .wrap header .header-bgImage .nav .nav-menu:hover .menu-item > div {
+    font-size: 1.4rem;
+    padding: 1rem 1rem;
+  }
+  .wrap header .header-bgImage .nav .nav-menu:hover .menu-item > div > a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .wrap header .header-bgImage .nav .nav-menu:hover .menu-item > div:hover {
+    background-color: #9bdeff;
   }
 }
 .wrap header .header-bgImage .header-main {
