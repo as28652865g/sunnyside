@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700;9..144,900&display=swap');
+@import 'font';
 
 *
 {
@@ -8,20 +9,15 @@
     box-sizing: border-box;
 }
 
+
 //Font family
 $font-family-Barlow: 'Barlow', sans-serif;
 $font-family-Fraunces: 'Fraunces', serif;
 
-//font color modify 
-$primary: #fff;
-$secondary: #000;
-$gray-300: #8A8990;
-$blue-300: #9bdeff;
-$green-900: #32796B;
-$green-700: #488C7D;
-$green-500: #6fc6b3;
-$green-300: #90D4C5;
-
+body,html 
+{
+    font-family: $font-family-Barlow;
+}
 
 //keyframes
 @keyframes UpDown{
@@ -64,33 +60,42 @@ $green-300: #90D4C5;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding: 1rem 2rem;
                 font-family: $font-family-Barlow;
-                padding: 1.5rem 3rem 0 2rem;
+                @include pad 
+                {
+                    padding: 1rem;
+                }
                 .logo
                 {
-                    font-size: 2rem;
-                    font-weight: 600;
+                    padding-left: 2rem;
+                    font-size: $size-big;
+                    font-weight: $weight-regular;
                     cursor: pointer;
+                    @include pad 
+                    {
+                        padding-left: 0;
+                    }
                 }
                 .nav-item
                 {
                     display: flex;
                     cursor: pointer;
-                    font-weight: 600;
-                    font-size: 1.2rem;
                     & > div 
                     {
-                        padding:1rem 2rem;
+                        padding: 1rem 2rem;
                         & > a 
                         {
+                            font-size: $size-small;
+                            font-weight: $weight-light;
                             text-decoration: none;
                             color: $primary;
                         }
                     }
                     & > div:hover
                     {
-                        background-color: #6FCFFF;
-                        border-radius: 2rem;
+                        background-color: $blue-300;
+                        border-radius: 5rem;
                     }
                     @include pad 
                     {
@@ -122,7 +127,7 @@ $green-300: #90D4C5;
                             background-color: $gray-300;
                             & > div 
                             {
-                                font-size: 1.4rem;
+                                font-size: $size-small;
                                 padding: 1rem 1rem;
                                 & > a 
                                 {
@@ -145,7 +150,8 @@ $green-300: #90D4C5;
                 align-items: center;
                 justify-content: center;
                 font-family: $font-family-Fraunces;
-                font-size: 3.5rem;
+                font-size: $size-biggest;
+                font-weight: $weight-medium;
                 letter-spacing: .2rem;
                 padding-top: 3rem;
                 & > p.icon-arrow-down
@@ -160,7 +166,7 @@ $green-300: #90D4C5;
                 }
                 @include pad 
                 {
-                    font-size: 2.5rem;
+                    font-size: $size-big;
                     padding-top: 4rem;
                     & > p.icon-arrow-down 
                     {
@@ -169,7 +175,7 @@ $green-300: #90D4C5;
                 }
                 @include mobile
                 {
-                    font-size: 3rem;
+                    font-size: $size-big;
                     padding: 3rem 4%;
                     & > p.icon-arrow-down 
                     {
@@ -190,22 +196,23 @@ $green-300: #90D4C5;
             max-width: 50%;
             & > h2 
             {
-                font-size: 2.5rem;
                 font-family: $font-family-Fraunces;
+                font-size: $size-biggest;
+                font-weight: $weight-bold;
             }
             & > p 
             {
-                padding-top: 1rem;
-                font-size: 1rem;
+                padding-top: 2rem;
+                font-size: $size-small;
                 color: #8A8990;
                 font-family: $font-family-Barlow;
-                font-weight: 600;
+                font-weight: $weight-light;
                 & + p 
                 {
-                    font-size: 1.2rem;
-                    font-weight: bold;
-                    color: #000;
+                    color: $secondary;
                     font-family: $font-family-Fraunces;
+                    font-size: $size-medium;
+                    font-weight: $weight-medium;
                 }
             }
             & > img 
@@ -224,21 +231,44 @@ $green-300: #90D4C5;
             flex-direction: column;
             & > div 
             {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 max-width: 100%;
-                & > h2 {font-size: 1.8rem;}
+                height: 600px;
+                & > h2 
+                {
+                    font-size: $size-biggest;
+                    font-weight: $weight-medium;
+                }
                 & > p 
                 {
-                    padding-top: .5rem;
-                    font-size: 0.5rem;
+                    padding: 2.5rem 0;
+                    font-size: $size-small;
                     & + p 
                     {
-                        font-size: 1rem;
+                        font-size: $size-medium;
                     }
                 }
                 &:nth-child(1),
                 &:nth-child(4)
                 {
-                    padding: 15%;
+                    padding: 10% 3%;
+                }
+            }
+        }
+        @include mobile
+        {
+            & > div 
+            {
+                height: 350px;
+                & > h2 
+                {
+                    font-size: $size-big;
+                }
+                & > p 
+                {
+                    padding: 1rem 0;
                 }
             }
         }
@@ -251,18 +281,21 @@ $green-300: #90D4C5;
         align-items: center;
         & > h3 
         {
-            padding-top: 5rem;
-            font-size: 1.8rem;
+            padding-top: 3rem;
+            font-family: $font-family-Fraunces;
+            font-size: $size-big;
+            font-weight: $weight-regular;
             letter-spacing: .2rem;
             color: $gray-300;
         }
         .items
         {
             display: flex;
+            flex-wrap: wrap;
             padding-top: 2.5rem;
             & > .item 
             {
-                padding: 0 2%;
+                padding: 0 5%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -270,13 +303,24 @@ $green-300: #90D4C5;
                 text-align: center;
                 & > img 
                 {
-                    width: 100px;
-                    height: 100px;
+                    width: 120px;
+                    height: 120px;
                     border-radius: 50%;
                 }
                 & > p 
                 {
+                    line-height: 1.4rem;
                     padding-top: 3rem;
+                    font-size: $size-small;
+                    & + p 
+                    {
+                        padding-bottom: .5rem;
+                        font-weight: $weight-medium;
+                    }
+                }
+                & > .text 
+                {
+                    padding-bottom: 1.5rem;
                 }
             }
         }
@@ -284,8 +328,7 @@ $green-300: #90D4C5;
         {
             & > h3 
             {
-                padding-top: 2rem;
-                font-size: 1.4rem;
+                font-size: $size-small + 0.5rem;
             }
             .items 
             {
@@ -305,6 +348,7 @@ $green-300: #90D4C5;
         & > img 
         {
             width: 25%;
+            max-height: 400px;
         }
         @include mobile
         {
@@ -323,17 +367,17 @@ $green-300: #90D4C5;
         {
             font-family: $font-family-Barlow;
             color: $green-900;
-            font-size: 2.5rem;
-            font-weight: 600;
+            font-size: $size-biggest;
+            font-weight: $weight-regular;
             cursor: default;
         }
         & > .footer-link 
         {
             display: flex;
+            padding: 1rem;
             & > div 
             {
-                margin-top: 2rem;
-                padding: 1rem 1.5rem;
+                padding: .5rem 1.5rem;
                 &:hover 
                 {
                     background-color: $green-500;
@@ -342,15 +386,15 @@ $green-300: #90D4C5;
                 & > a 
                 {
                     text-decoration: none;
-                    font-family: $font-family-Barlow;
                     color: $green-700;
-                    font-weight: 600;
+                    font-family: $font-family-Barlow;
+                    font-size: $size-small;
+                    font-weight: $weight-regular;
                 }
             }
         }
         & > .footer-icon 
         {
-            padding-top: 3rem;
             padding-bottom: 2rem;
             & > .icon-link 
             {
@@ -359,6 +403,14 @@ $green-300: #90D4C5;
                     padding: 0 .5rem;
                     cursor: pointer;
                 }
+            }
+        }
+        @include pad 
+        {
+            padding-top: 1rem;
+            & > h2
+            {
+                font-size: $size-big;
             }
         }
     }
