@@ -252,7 +252,6 @@ body, html {
 }
 .wrap .textimonials .items {
   display: flex;
-  flex-wrap: wrap;
   padding-top: 2.5rem;
 }
 .wrap .textimonials .items > .item {
@@ -279,6 +278,15 @@ body, html {
 }
 .wrap .textimonials .items > .item > .text {
   padding-bottom: 1.5rem;
+}
+@media (max-width: 769px) {
+  .wrap .textimonials > h3 {
+    text-align: center;
+  }
+  .wrap .textimonials > .items {
+    width: 100%;
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: 426px) {
   .wrap .textimonials > h3 {

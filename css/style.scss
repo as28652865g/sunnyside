@@ -291,7 +291,6 @@ body,html
         .items
         {
             display: flex;
-            flex-wrap: wrap;
             padding-top: 2.5rem;
             & > .item 
             {
@@ -322,6 +321,18 @@ body,html
                 {
                     padding-bottom: 1.5rem;
                 }
+            }
+        }
+        @include pad 
+        {
+            & > h3 
+            {
+                text-align: center;
+            }
+            & > .items 
+            {
+                width: 100%;
+                flex-wrap: wrap;
             }
         }
         @include mobile 
