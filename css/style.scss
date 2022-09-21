@@ -8,17 +8,20 @@
     box-sizing: border-box;
 }
 
-//Font color
-$white: #fff;
-$black: #000;
-$blue: #9bdeff;
-$gray: #8A8990;
-$footer-bg: #90D4C5;
-$footer-fontH2-color: #32796B;
-$footer-link-color: #488C7D;
-$footer-link-color-hover: #6fc6b3;
+//Font family
 $font-family-Barlow: 'Barlow', sans-serif;
 $font-family-Fraunces: 'Fraunces', serif;
+
+//font color modify 
+$primary: #fff;
+$secondary: #000;
+$gray-300: #8A8990;
+$blue-300: #9bdeff;
+$green-900: #32796B;
+$green-700: #488C7D;
+$green-500: #6fc6b3;
+$green-300: #90D4C5;
+
 
 //keyframes
 @keyframes UpDown{
@@ -47,7 +50,7 @@ $font-family-Fraunces: 'Fraunces', serif;
     height: 100%;
     header
     {
-        color: $white;
+        color: $primary;
         position: relative;
         .header-bgImage
         {
@@ -81,7 +84,7 @@ $font-family-Fraunces: 'Fraunces', serif;
                         & > a 
                         {
                             text-decoration: none;
-                            color: $white;
+                            color: $primary;
                         }
                     }
                     & > div:hover
@@ -116,7 +119,7 @@ $font-family-Fraunces: 'Fraunces', serif;
                             right: 2rem;
                             width: 40%;
                             height: auto;
-                            background-color: $gray;
+                            background-color: $gray-300;
                             & > div 
                             {
                                 font-size: 1.4rem;
@@ -124,11 +127,11 @@ $font-family-Fraunces: 'Fraunces', serif;
                                 & > a 
                                 {
                                     text-decoration: none;
-                                    color: $white;
+                                    color: $primary;
                                 }
                                 &:hover 
                                 {
-                                    background-color: $blue;
+                                    background-color: $blue-300;
                                 }
                             }
                         }
@@ -251,7 +254,7 @@ $font-family-Fraunces: 'Fraunces', serif;
             padding-top: 5rem;
             font-size: 1.8rem;
             letter-spacing: .2rem;
-            color: $gray;
+            color: $gray-300;
         }
         .items
         {
@@ -314,12 +317,12 @@ $font-family-Fraunces: 'Fraunces', serif;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: $footer-bg;
+        background-color: $green-300;
         padding-top: 2rem;
         & > h2 
         {
             font-family: $font-family-Barlow;
-            color: $footer-fontH2-color;
+            color: $green-900;
             font-size: 2.5rem;
             font-weight: 600;
             cursor: default;
@@ -333,14 +336,14 @@ $font-family-Fraunces: 'Fraunces', serif;
                 padding: 1rem 1.5rem;
                 &:hover 
                 {
-                    background-color: $footer-link-color-hover;
+                    background-color: $green-500;
                     border-radius: 2rem;
                 }
                 & > a 
                 {
                     text-decoration: none;
                     font-family: $font-family-Barlow;
-                    color: $footer-link-color;
+                    color: $green-700;
                     font-weight: 600;
                 }
             }
