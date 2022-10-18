@@ -54,7 +54,7 @@ body,html
             background-size: cover;
             background-position: center;
             width: 100%;
-            height: 75vh;
+            height: 100vh;
             .nav
             {
                 display: flex;
@@ -64,11 +64,10 @@ body,html
                 font-family: $font-family-Barlow;
                 @include pad 
                 {
-                    padding: 1rem;
+                    padding: 1rem 3rem;
                 }
                 .logo
                 {
-                    padding-left: 2rem;
                     font-size: $size-big;
                     font-weight: $weight-regular;
                     cursor: pointer;
@@ -81,11 +80,14 @@ body,html
                 {
                     display: flex;
                     cursor: pointer;
+                    text-align: center;
                     & > div 
                     {
-                        padding: 1rem 2rem;
+                        width: 140px;
+                        padding: 1rem;
                         & > a 
                         {
+                            display: block;
                             font-size: $size-small;
                             font-weight: $weight-light;
                             text-decoration: none;
@@ -96,16 +98,23 @@ body,html
                     {
                         background-color: $blue-300;
                         border-radius: 5rem;
+                        transition: all 2s;
+                        a{
+                            font-weight: 700;
+                        }
                     }
                     @include pad 
                     {
+                        display: none;
+                    }
+                    @media screen and (max-width: 1025px){
                         display: none;
                     }
                 }
                 .nav-menu 
                 {
                     display: none;
-                    @include pad 
+                    @media screen and (max-width: 1025px)
                     {
                         display: block;
                         & > img 
@@ -150,7 +159,7 @@ body,html
                 align-items: center;
                 justify-content: center;
                 font-family: $font-family-Fraunces;
-                font-size: $size-biggest;
+                font-size: $size-biggest + 1rem;
                 font-weight: $weight-medium;
                 letter-spacing: .2rem;
                 padding-top: 3rem;
@@ -164,13 +173,17 @@ body,html
                     animation-direction:alternate;
                     animation-iteration-count: infinite;
                 }
+                @media screen and (max-width: 1025px){
+                    font-size: $size-biggest;
+                }
                 @include pad 
                 {
-                    font-size: $size-big;
+                    text-align: center;
+                    font-size: $size-big + 1rem;
                     padding-top: 4rem;
                     & > p.icon-arrow-down 
                     {
-                        padding-top: 2rem;
+                        display: none;
                     }
                 }
                 @include mobile
@@ -197,12 +210,12 @@ body,html
             & > h2 
             {
                 font-family: $font-family-Fraunces;
-                font-size: $size-biggest;
+                font-size: $size-big + .5rem;
                 font-weight: $weight-bold;
             }
             & > p 
             {
-                padding-top: 2rem;
+                padding-top: 1.5rem;
                 font-size: $size-small;
                 color: #8A8990;
                 font-family: $font-family-Barlow;
@@ -223,7 +236,7 @@ body,html
             &:nth-child(1),
             &:nth-child(4)
             {
-                padding: 2% 3%;
+                padding: 0 5%;
             }
         }
         @include pad 
@@ -235,7 +248,7 @@ body,html
                 flex-direction: column;
                 justify-content: center;
                 max-width: 100%;
-                height: 600px;
+                height: 490px;
                 & > h2 
                 {
                     font-size: $size-biggest;
@@ -253,7 +266,7 @@ body,html
                 &:nth-child(1),
                 &:nth-child(4)
                 {
-                    padding: 10% 3%;
+                    padding: 0 3%;
                 }
             }
         }
@@ -261,14 +274,14 @@ body,html
         {
             & > div 
             {
-                height: 350px;
+                height: 300px;
                 & > h2 
                 {
                     font-size: $size-big;
                 }
                 & > p 
                 {
-                    padding: 1rem 0;
+                    padding: .5rem 0;
                 }
             }
         }
@@ -388,14 +401,20 @@ body,html
             padding: 1rem;
             & > div 
             {
-                padding: .5rem 1.5rem;
+                padding: 0 0.5rem;
                 &:hover 
                 {
                     background-color: $green-500;
-                    border-radius: 2rem;
+                    border-radius: 5rem;
+                    transition: all 2s;
+                    a{
+                        font-weight: 600;
+                    }
                 }
                 & > a 
                 {
+                    display: block;
+                    padding: 1rem;
                     text-decoration: none;
                     color: $green-700;
                     font-family: $font-family-Barlow;

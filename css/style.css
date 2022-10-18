@@ -41,7 +41,7 @@ body, html {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 75vh;
+  height: 100vh;
 }
 .wrap header .header-bgImage .nav {
   display: flex;
@@ -52,11 +52,10 @@ body, html {
 }
 @media (max-width: 769px) {
   .wrap header .header-bgImage .nav {
-    padding: 1rem;
+    padding: 1rem 3rem;
   }
 }
 .wrap header .header-bgImage .nav .logo {
-  padding-left: 2rem;
   font-size: 2.5rem;
   font-weight: 500;
   cursor: pointer;
@@ -69,11 +68,14 @@ body, html {
 .wrap header .header-bgImage .nav .nav-item {
   display: flex;
   cursor: pointer;
+  text-align: center;
 }
 .wrap header .header-bgImage .nav .nav-item > div {
-  padding: 1rem 2rem;
+  width: 140px;
+  padding: 1rem;
 }
 .wrap header .header-bgImage .nav .nav-item > div > a {
+  display: block;
   font-size: 1.2rem;
   font-weight: 300;
   text-decoration: none;
@@ -82,8 +84,17 @@ body, html {
 .wrap header .header-bgImage .nav .nav-item > div:hover {
   background-color: #9bdeff;
   border-radius: 5rem;
+  transition: all 2s;
+}
+.wrap header .header-bgImage .nav .nav-item > div:hover a {
+  font-weight: 700;
 }
 @media (max-width: 769px) {
+  .wrap header .header-bgImage .nav .nav-item {
+    display: none;
+  }
+}
+@media screen and (max-width: 1025px) {
   .wrap header .header-bgImage .nav .nav-item {
     display: none;
   }
@@ -91,7 +102,7 @@ body, html {
 .wrap header .header-bgImage .nav .nav-menu {
   display: none;
 }
-@media (max-width: 769px) {
+@media screen and (max-width: 1025px) {
   .wrap header .header-bgImage .nav .nav-menu {
     display: block;
   }
@@ -128,7 +139,7 @@ body, html {
   align-items: center;
   justify-content: center;
   font-family: "Fraunces", serif;
-  font-size: 4.5rem;
+  font-size: 5.5rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
   padding-top: 3rem;
@@ -147,13 +158,19 @@ body, html {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
+@media screen and (max-width: 1025px) {
+  .wrap header .header-bgImage .header-main {
+    font-size: 4.5rem;
+  }
+}
 @media (max-width: 769px) {
   .wrap header .header-bgImage .header-main {
-    font-size: 2.5rem;
+    text-align: center;
+    font-size: 3.5rem;
     padding-top: 4rem;
   }
   .wrap header .header-bgImage .header-main > p.icon-arrow-down {
-    padding-top: 2rem;
+    display: none;
   }
 }
 @media (max-width: 426px) {
@@ -176,11 +193,11 @@ body, html {
 }
 .wrap .main > div > h2 {
   font-family: "Fraunces", serif;
-  font-size: 4.5rem;
+  font-size: 3rem;
   font-weight: 900;
 }
 .wrap .main > div > p {
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   font-size: 1.2rem;
   color: #8A8990;
   font-family: "Barlow", sans-serif;
@@ -197,7 +214,7 @@ body, html {
   vertical-align: bottom;
 }
 .wrap .main > div:nth-child(1), .wrap .main > div:nth-child(4) {
-  padding: 2% 3%;
+  padding: 0 5%;
 }
 @media (max-width: 769px) {
   .wrap .main {
@@ -208,7 +225,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     max-width: 100%;
-    height: 600px;
+    height: 490px;
   }
   .wrap .main > div > h2 {
     font-size: 4.5rem;
@@ -222,18 +239,18 @@ body, html {
     font-size: 2rem;
   }
   .wrap .main > div:nth-child(1), .wrap .main > div:nth-child(4) {
-    padding: 10% 3%;
+    padding: 0 3%;
   }
 }
 @media (max-width: 426px) {
   .wrap .main > div {
-    height: 350px;
+    height: 300px;
   }
   .wrap .main > div > h2 {
     font-size: 2.5rem;
   }
   .wrap .main > div > p {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
   }
 }
 .wrap .textimonials {
@@ -333,13 +350,19 @@ body, html {
   padding: 1rem;
 }
 .wrap footer > .footer-link > div {
-  padding: 0.5rem 1.5rem;
+  padding: 0 0.5rem;
 }
 .wrap footer > .footer-link > div:hover {
   background-color: #6fc6b3;
-  border-radius: 2rem;
+  border-radius: 5rem;
+  transition: all 2s;
+}
+.wrap footer > .footer-link > div:hover a {
+  font-weight: 600;
 }
 .wrap footer > .footer-link > div > a {
+  display: block;
+  padding: 1rem;
   text-decoration: none;
   color: #488C7D;
   font-family: "Barlow", sans-serif;
